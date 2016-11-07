@@ -1,2 +1,2 @@
 # python_basic
-Python interview question Library
+Python interview questions bank
