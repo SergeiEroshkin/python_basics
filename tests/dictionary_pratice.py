@@ -6,8 +6,8 @@ stuff = {'rope': 1,
         'arrow': 12}
 
 print "Inventory"
-for (value,key) in zip(stuff.values(), stuff.keys()):
-    print value,key
+for (value, key) in zip(stuff.values(), stuff.keys()):
+    print value, key
 
 count = 0
 for item in stuff.items(): count += list(item)[1]
