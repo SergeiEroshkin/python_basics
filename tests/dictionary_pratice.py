@@ -1,21 +1,17 @@
-# Given Dictionary
-stuff = {'rope': 1,
-        'torch': 6,
-        'gold coin': 42,
-        'dagger': 1,
-        'arrow': 12}
-
-print "Inventory"
-for value, key in stuff.items():
-    print value, key
+stuff = {'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}
 
 
-def displayInventory(inventory):
+def display_inventory(inventory):
+
+    print 'Inventory: '
     item_total = 0
-    for item in stuff.items(): item_total += list(item)[1]
+    for value, key in inventory.items():
+        print value, key
+    for item in inventory.items():
+        item_total += list(item)[1]
     return 'Total number of Items: ' + str(item_total)
-print displayInventory(stuff)
 
+print display_inventory(stuff)
 
 
 

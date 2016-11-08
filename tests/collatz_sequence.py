@@ -9,14 +9,14 @@ def collatz(number):
     return new_number
 
 
-guess = raw_input("Please enter number: ")
+guess = raw_input('Please enter number: ')
 try:
     number = int(guess)
-    while collatz(number)!= 1:
-        guess = raw_input("Please enter number: ")
+    while collatz(number) != 1:
+        guess = raw_input('Please enter number: ')
         number = int(guess)
 except:
-    print "Please enter valid number"
+    print 'Please enter valid number'
 
 
 

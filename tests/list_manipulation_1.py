@@ -1,5 +1,6 @@
 spam = ['apples', 'bananas', 'tofu', 'cats']
 
+
 def list_to_string(a):
 
     string = ''
