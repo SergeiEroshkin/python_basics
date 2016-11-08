@@ -6,12 +6,16 @@ stuff = {'rope': 1,
         'arrow': 12}
 
 print "Inventory"
-for (value, key) in zip(stuff.values(), stuff.keys()):
+for value, key in stuff.items():
     print value, key
 
-count = 0
-for item in stuff.items(): count += list(item)[1]
-print 'Total number of Items: ' + str(count)
+
+def displayInventory(inventory):
+    item_total = 0
+    for item in stuff.items(): item_total += list(item)[1]
+    return 'Total number of Items: ' + str(item_total)
+print displayInventory(stuff)
+
 
 
 
