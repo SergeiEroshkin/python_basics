@@ -13,4 +13,7 @@ if len(request) < 1:
     print "Text is not provided"
 
 else:
-    print vowel(request)
+    if len(vowel(request)) < 1:
+        print "There is no vowel"
+    else:
+        print vowel(request)
