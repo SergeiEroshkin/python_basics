@@ -1,10 +1,9 @@
-def is_prime(x):
-    if x < 2:
-        return False
-    if x == 2:
-        return True
-    else:
-        for div in range(2, x):
-            if x % div == 0:
-                return False
-        return True
+def prime(n):
+
+	if type(n) == int and n > 1:
+		for num in range(2,n):
+			if (n % num) == 0:
+				return False
+	return True
+
+print prime(3)
