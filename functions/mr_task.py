@@ -19,7 +19,7 @@ def get_most_valuable_items():
     new_dict ={}
     id_list = []
     total = 0
-    for i in range(len(inventory)):
+    for part in range(len(inventory)):
         max_value = max(inventory, key=lambda x: x['value'])
         suitcase_volume -= max_value["volume"]
         id_list.append(str(max_value["id"]))
