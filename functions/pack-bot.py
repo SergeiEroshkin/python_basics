@@ -2,19 +2,19 @@ import sys
 import requests
 import json
 
-"""suitcase_url = str(sys.argv[1])
+suitcase_url = str(sys.argv[1])
 #'http://pkit.wopr.c2x.io:8000/suitcases/rolly'
 inventory_url = str(sys.argv[2])
-#'http://pkit.wopr.c2x.io:8000/robots/hey-you/parts'"""
+#'http://pkit.wopr.c2x.io:8000/robots/hey-you/parts'
 
 
 def get_suitcase_size():
-    suitecase_size = requests.get('http://pkit.wopr.c2x.io:8000/suitcases/rolly')
+    suitecase_size = requests.get(suitcase_url)
     return suitecase_size.json()['volume']
 
 
 def get_most_valuable_items():
-    inventory = requests.get('http://pkit.wopr.c2x.io:8000/robots/hey-you/parts').json()
+    inventory = requests.get(inventory_url).json()
     suitcase_volume = get_suitcase_size()
     new_dict ={}
     id_list = []
@@ -29,6 +29,6 @@ def get_most_valuable_items():
             break
     new_dict["part_ids"] = sorted(id_list)
     new_dict["value"] = total
-    return json.dumps(new_dict)
+    return json.dumps(new_dict, sort_keys=True, indent=4, separators=(',', ':'))
 
 print get_most_valuable_items()
