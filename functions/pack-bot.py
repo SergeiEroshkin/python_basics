@@ -3,23 +3,21 @@ import requests
 import json
 
 suitcase_url = str(sys.argv[1])
-#'http://pkit.wopr.c2x.io:8000/suitcases/rolly'
 inventory_url = str(sys.argv[2])
-#'http://pkit.wopr.c2x.io:8000/robots/hey-you/parts'
 
 
 def get_suitcase_size():
-    suitcase_size = requests.get('http://pkit.wopr.c2x.io:8000/suitcases/rolly')
+    suitcase_size = requests.get(suitcase_url)
     return suitcase_size.json()['volume']
 
 
 def get_density_dict():
-    inventory = requests.get('http://pkit.wopr.c2x.io:8000/robots/hey-you/parts').json()
+    inventory = requests.get(inventory_url).json()
     for part in inventory:
         item_density = ((float(part['value'])/float(part['volume'])))
         part['gross_value'] = item_density
-    ccc = sorted(inventory, key=lambda gross_value: gross_value['gross_value'], reverse=True)
-    return ccc
+    sorted_inventory = sorted(inventory, key=lambda gross_value: gross_value['gross_value'], reverse=True)
+    return sorted_inventory
 
 
 def get_most_valuable_set():
