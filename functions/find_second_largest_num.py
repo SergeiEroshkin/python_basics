@@ -1,6 +1,6 @@
 num = int(raw_input())
-nums = raw_input()
-nums_list = list(set(nums.split(' ')))
+nums = map(int, raw_input().split())
+nums_list = list(set(nums))
 print nums_list
 n = max(nums_list)
 print n
