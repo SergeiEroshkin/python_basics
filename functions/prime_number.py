@@ -1,9 +1,12 @@
+prime_list = list()
+
+
 def prime(n):
-
-	if type(n) == int and n > 1:
-		for num in range(2,n):
-			if (n % num) == 0:
-				return False
-	return True
-
-print prime(3)
+    for num in range(2, n+1):
+        for i in range(2, num):
+            if num % i == 0:
+                break
+        else:
+            prime_list.append(num)
+    return prime_list
+print prime(19)
