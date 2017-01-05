@@ -13,5 +13,21 @@ def fib(number):
         fib_list.append(b)
     return fib_list
 
-print fib(6)
+
+print fib(20)
 print fib.__doc__
+
+
+def fib(n):
+    """
+
+    :param n: integer
+    :return: fib number position = integer
+    """
+    a, b = 1, 1
+    for i in range(n - 1):
+        a, b = b, a + b
+    return a
+
+
+print fib(8)
