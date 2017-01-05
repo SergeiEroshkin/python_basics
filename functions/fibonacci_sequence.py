@@ -7,6 +7,7 @@ def fib(number):
     fib_list = list()
     a, b = 0, 1
     fib_list.insert(a, a)
+    fib_list.insert(b, b)
     while b < number:
         a, b = b, a + b
         fib_list.append(b)
