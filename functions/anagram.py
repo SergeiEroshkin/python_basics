@@ -7,12 +7,14 @@ def anagram(string1, string2):
     """
     if len(string1) != len(string2):
         return False
-    str1_list = list(string1)
-    str2_list = list(string2)
-    return str1_list.sort() == str2_list.sort()
+    else:
+        return sorted(list(string1)) == sorted(list(string2))
 
+
+#Test data#
 a = "Hello,World"
 b = a[::-1]
-c = "Welcome"
+c = "World,Helli"
 print anagram(a, b)
 print anagram(a, c)
+
