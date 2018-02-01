@@ -10,12 +10,13 @@ def consonant(string):
     result = consonant_regex.findall(string)
     return result
 
-request = raw_input("Please Provide text: ")
 
-if len(request) < 1:
+user_input = raw_input("Please Provide text: ")
+
+if len(user_input) < 1:
     print "Text is not provided."
 else:
-    if len(consonant(request)) < 1:
+    if len(consonant(user_input)) < 1:
         print "There is no consonant."
     else:
-        print consonant(request)
+        print consonant(user_input)
