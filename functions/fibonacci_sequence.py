@@ -1,33 +1,29 @@
 def fib(number):
     """
-    Function to get fibonacci sequence in list format
-    :param number: integer
-    :return: list
+    Function to get fibonacci sequence
+    :param : integer
+    :return: fibonacci sequence from 1 to number defined by user
     """
     fib_list = list()
-    a, b = 0, 1
-    fib_list.insert(a, a)
-    fib_list.insert(b, b)
-    while b < number:
-        a, b = b, a + b
-        fib_list.append(b)
+    a, b = 1, 1
+    for i in range(number):
+        a, b = b, a+b
+        fib_list.append(a)
     return fib_list
 
 
-print fib(20)
-print fib.__doc__
+print fib(12)
 
 
-def fib(n):
+def fibo(n):
     """
-
     :param n: integer
-    :return: fib number position = integer
+    :return: Value of Nth number in Fibonacci sequence
     """
     a, b = 1, 1
-    for i in range(n - 1):
+    for i in range(n):
         a, b = b, a + b
-    return a
+    return 'Number is: ' + str(a)
 
 
-print fib(8)
+print fibo(12)

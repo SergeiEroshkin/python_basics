@@ -4,12 +4,16 @@ def factorial(n):
     :param n:
     :return: Factorial n
     """
-    total = 1
-    if type(n) == int and n > 0:
-        while n > 1:
-            total *= n
-            n -= 1
+    if n == 1:
+        return 1
     else:
-        print 'Invalid input'
-    return total
+        if type(n) == int and n > 1:
+            return n * factorial(n-1)
+        else:
+            return 'Your input is: %s' % n
+
+
+# Test Data
 print factorial(5)
+print factorial(1)
+print factorial(0)
