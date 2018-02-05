@@ -1,12 +1,12 @@
-prime_list = list()
-
-
 def prime(n):
-    for num in range(2, n+1):
-        for i in range(2, num):
-            if num % i == 0:
+    prime_list = list()
+    for number in range(2, n+1):
+        for item in range(2, number):
+            if number % item == 0:
                 break
         else:
-            prime_list.append(num)
+            prime_list.append(number)
     return prime_list
-print prime(19)
+
+
+print prime(21)
