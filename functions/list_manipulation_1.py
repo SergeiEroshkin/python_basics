@@ -1,11 +1,12 @@
 spam = ['apples', 'bananas', 'tofu', 'cats']
 
 
-def list_to_string(a):
+def list_to_string(my_list):
 
-    string = ''
-    for item in range((len(a)) - 1):
-         string += a[item] + ',' + ' '
-    return string + "and" + " " + a[(len(a))-1]
+    string = str()
+    for item in range(len(my_list)-1):
+        string += str(my_list[item]) + ', '
+    return string + "and " + str(my_list[-1])
+
 
 print list_to_string(spam)
