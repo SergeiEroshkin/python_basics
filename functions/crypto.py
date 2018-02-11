@@ -4,11 +4,10 @@ def starts_with_vowel(word):
     :return: True if the word starts with a vowel and False otherwise
     """
     vowel = ['a', 'e', 'i', 'o', 'u']
-    for words in word:
-        if words in vowel:
-            return True
-        else:
-            return False
+    if word[0] in vowel:
+        return True
+    else:
+        return False
 
 
 def encrypt(word):
@@ -62,16 +61,14 @@ def translate(text, mode):
 
 def choose_mode():
     """
-    :return: Mode to be executed
+    :return: Mode to be performed
     """
-    more_input = True
-    while more_input:
+    while True:
         mode = raw_input('Please type E to encrypt or D to decrypt a message: ')
         if mode == 'E' or mode == 'D':
-            more_input = False
+            return mode
         else:
             print 'Invalid choice'
-    return mode
 
 
 def main():

@@ -17,12 +17,9 @@ the rounded course average and the remaining grades as shown in the expected out
 """
 
 grades = []
-more_input = True
-while more_input:
+while True:
     user_input = raw_input('Please Enter Grade: ')
-    if user_input == 'end':
-        more_input = False
-    elif len(user_input) == 0:
+    if len(user_input) == 0 or user_input == 'end':
         break
     else:
         grades.append(float(user_input))
@@ -41,11 +38,11 @@ else:
     print 'Course average ' + str(round(avg_grades, 1))
     if avg_grades >= 90:
         print 'Letter Grade: A'
-    elif avg_grades > 80:
+    elif avg_grades >= 80:
         print 'Letter Grade: B'
-    elif avg_grades > 70:
+    elif avg_grades >= 70:
         print 'Letter Grade: C'
-    elif avg_grades > 60:
+    elif avg_grades >= 60:
         print 'Letter Grade: D'
     elif avg_grades < 60:
         print 'F'
