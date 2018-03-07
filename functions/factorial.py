@@ -6,11 +6,10 @@ def factorial(n):
     """
     if n == 1:
         return 1
+    if type(n) == int and n > 1:
+        return n * factorial(n-1)
     else:
-        if type(n) == int and n > 1:
-            return n * factorial(n-1)
-        else:
-            return 'Your input is: %s' % n
+        return 'Your input is: %s' % n
 
 
 # Test Data

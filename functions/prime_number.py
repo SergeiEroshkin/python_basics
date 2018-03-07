@@ -9,4 +9,4 @@ def prime(n):
     return prime_list
 
 
-print prime(21)
+print prime(23)

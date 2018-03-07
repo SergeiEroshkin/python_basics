@@ -7,9 +7,9 @@ def display_inventory(inventory):
     :return: Sum of dictionary values
     """
     print 'Inventory: '
-    for value, key in inventory.items():
+    for value, key in inventory.iteritems():
         print value, key
-    return 'Total number of Items: ' + str(sum(inventory.values()))
+    return 'Total number of Items: ' + str(sum(inventory.itervalues()))
 
 
 print display_inventory(stuff)

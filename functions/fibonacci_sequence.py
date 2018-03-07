@@ -5,7 +5,7 @@ def fib(number):
     :return: fibonacci sequence from 1 to number defined by user
     """
     fib_list = list()
-    a, b = 1, 1
+    a, b = 1, 0
     for i in range(number):
         a, b = b, a+b
         fib_list.append(a)
@@ -20,7 +20,7 @@ def fibo(n):
     :param n: integer
     :return: Value of Nth number in Fibonacci sequence
     """
-    a, b = 1, 1
+    a, b = 1, 0
     for i in range(n):
         a, b = b, a + b
     return 'Number is: ' + str(a)

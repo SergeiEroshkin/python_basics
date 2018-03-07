@@ -2,21 +2,40 @@ import re
 
 
 def consonant(string):
-    """
-    :param string:
-    :return: List of constant letters or 'There is no consonant.'
-    """
     consonant_regex = re.compile(r'[^aeiouAEIOU]')
     result = consonant_regex.findall(string)
     return result
 
 
-user_input = raw_input("Please Provide text: ")
+def count_consonant(s):
+    consonant_dict = {}
+    for letter in consonant(s):
+        consonant_dict[letter] = consonant_dict.get(letter, 0) + 1
+    return consonant_dict
 
-if len(user_input) < 1:
-    print "Text is not provided."
-else:
-    if len(consonant(user_input)) < 1:
-        print "There is no consonant."
+
+def print_list(s):
+    nice_string = ' '.join(s)
+    return nice_string
+
+
+def print_dict(s):
+    for k, v in zip(count_consonant(s).keys(), count_consonant(s).values()):
+        print k, v
+
+
+def main():
+    user_input = raw_input("Please Provide text: ")
+    if len(user_input) < 1:
+        print "Text is not provided."
     else:
-        print consonant(user_input)
+        if len(consonant(user_input)) < 1:
+            print "There is no consonant."
+        else:
+            print 'Consonant found: %s' % print_list(user_input)
+            print_dict(user_input)
+
+
+if __name__ == '__main__':
+    main()
+

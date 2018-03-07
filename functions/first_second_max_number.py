@@ -5,14 +5,15 @@ def second_max(array):
     :return: First and second max number
     """
     max1, max2 = float('-inf'), float('-inf')
-    for item in array:
+    for item in set(array):
         if item > max2:
-            if item >= max1:
+            if item > max1:
                 max1, max2 = item, max1
             else:
                 max2 = item
     print 'First maximum:', max1
     print 'Second maximum:', max2
 
-array1 = [0, 1, 2, 3, 4]
+
+array1 = [0, 1, 2, 3, 4, 4, 5, 5, 5]
 second_max(array1)

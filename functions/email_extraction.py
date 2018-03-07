@@ -7,5 +7,6 @@ def extract_email(abc):
     result = email_regex.findall(abc)
     return result
 
+
 test_string = open('/Users/SE/PycharmProjects/python_basics/emaillist', 'r')
 print extract_email(test_string.read())

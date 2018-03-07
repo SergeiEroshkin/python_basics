@@ -8,3 +8,4 @@ def is_prime(number):
 
 
 print is_prime(13)
+print is_prime(12)

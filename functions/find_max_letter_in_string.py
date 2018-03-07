@@ -8,13 +8,12 @@ def find_max_letter(string):
         print "The string is empty"
         return False
     count_letters = {}
-    for letter in s:
+    for letter in string:
         count_letters[letter] = count_letters.get(letter, 0) + 1
     max_occurrence = max(count_letters.values())
-    max_letters = {key for key, value in count_letters.items() if value == max_occurrence}
-    for let in string:
-        if let in max_letters:
-            return let
+    for k, v in count_letters.iteritems():
+        if v == max_occurrence:
+            print k
 
-s = "aaabbbcccddd"
+s = "aaabbbbccccddd"
 print find_max_letter(s)
