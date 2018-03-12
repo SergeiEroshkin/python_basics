@@ -32,7 +32,7 @@ def main():
         if len(consonant(user_input)) < 1:
             print "There is no consonant."
         else:
-            print 'Consonant found: %s' % print_list(user_input)
+            print 'Consonant found: %s' % print_list(consonant(user_input))
             print_dict(user_input)
 
 

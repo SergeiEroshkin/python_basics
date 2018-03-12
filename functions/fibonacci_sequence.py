@@ -21,9 +21,9 @@ def fibo(n):
     :return: Value of Nth number in Fibonacci sequence
     """
     a, b = 1, 0
-    for i in range(n):
-        a, b = b, a + b
-    return 'Number is: ' + str(a)
+    for item in range(n):
+        a, b = b, a+b
+    return a
 
 
 print fibo(12)
