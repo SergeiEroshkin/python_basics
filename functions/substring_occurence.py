@@ -1,13 +1,16 @@
 def get_value(string, substring):
+    # Does not count overlap
     return string.count(substring)
 
 
 def get_value_loop(string, substring):
     count = 0
-    for letter in range(0, len(string)):
-        if string[letter:letter + len(substring)] == substring:
+    for i in range(len(string)):
+        print i
+        if string[i: i + len(substring)] == substring:
             count += 1
     return count
 
 
-print get_value("lololo lo", "lo")
+print get_value("oooooo", "oo")
+print get_value_loop("oooooo", "oo")

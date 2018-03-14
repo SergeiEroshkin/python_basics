@@ -5,8 +5,8 @@ def is_fib(n):
     """
     a, b = 1, 1
     while a <= n:
-        a, b = b, a + b
-        if n == a:
+        a, b = b, a+b
+        if a == n:
             return True
         else:
             continue

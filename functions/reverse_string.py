@@ -3,7 +3,7 @@ def reverse(text):
     reversed_text = ''
     # Lets get length of string and use it to call letters by index
     length = len(text) - 1
-    while length >= 0:
+    for letter in text:
         reversed_text += text[length]
         length -= 1
     return reversed_text

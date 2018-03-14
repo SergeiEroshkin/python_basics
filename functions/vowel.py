@@ -7,6 +7,7 @@ def vowel(abc):
     result = vowel_regex.findall(abc)
     return result
 
+
 request = raw_input("Please Provide text: ")
 
 if len(request) < 1:

@@ -1,6 +1,8 @@
 def prime(n):
     prime_list = list()
-    for number in range(2, n+1):
+    # Let's walk through the list:
+    for number in range(2, n):
+        # Let's check if number in lust is prime number
         for item in range(2, number):
             if number % item == 0:
                 break
@@ -10,3 +12,5 @@ def prime(n):
 
 
 print prime(23)
+
+
