@@ -11,14 +11,8 @@ def factorial(n):
         return 'Invalid input %s' % n
 
 
-
 # Test Data
-
-a = 1
-b = 2
-c = 0
-d = 'string'
-print factorial(a)
-print factorial(b)
-print factorial(c)
-print factorial(d)
+print factorial(1)
+print factorial(2)
+print factorial(0)
+print factorial('string')

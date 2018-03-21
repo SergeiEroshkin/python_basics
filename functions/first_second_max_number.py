@@ -7,12 +7,10 @@ def second_max(array):
     max1, max2 = float('-inf'), float('-inf')
     for number in array:
         if number > max2:
-            if number == max1:
-                continue
-            elif number > max1:
+            if number > max1:
                 max2, max1 = max1, number
-            else:
-                max2 = number
+        else:
+            max2 = number
     print 'First number is %s, Second number %s.' % (max1, max2)
 
 

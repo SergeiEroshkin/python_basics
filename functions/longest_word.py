@@ -34,7 +34,7 @@ def report(word_dict):
 
 def main():
     word_count = count_words(my_file)
-    print report(word_count)
+    report(word_count)
 
 
 if __name__ == '__main__':

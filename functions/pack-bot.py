@@ -14,7 +14,7 @@ def get_suitcase_size():
 def get_density_dict():
     inventory = requests.get(inventory_url).json()
     for part in inventory:
-        item_density = ((float(part['value'])/float(part['volume'])))
+        item_density = float(part['value'])/float(part['volume'])
         part['gross_value'] = item_density
     sorted_inventory = sorted(inventory, key=lambda gross_value: gross_value['gross_value'], reverse=True)
     return sorted_inventory

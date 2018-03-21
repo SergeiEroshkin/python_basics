@@ -3,7 +3,7 @@ def is_fib(n):
     :param n: integer
     :return: True if n belongs to Fibonacci sequence or False if not
     """
-    a, b = 1, 1
+    a, b = 1, 0
     while a <= n:
         a, b = b, a+b
         if a == n:

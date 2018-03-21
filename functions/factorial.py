@@ -13,7 +13,6 @@ def factorial(n):
         return 'You input is %s' % n
 
 
-
 # Test Data
 print factorial(5)
 print factorial(1)

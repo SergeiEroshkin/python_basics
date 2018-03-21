@@ -10,9 +10,9 @@ def add_to_inventory(inventory, added_item):
 
 def display_inventory(inventory):
     print '*** Inventory ***'
-    for k, v in inventory.items():
+    for k, v in inventory.iteritems():
         print k, v
-    return 'Total number of items is %s.' % str(sum(inventory.values()))
+    return 'Total number of items is %s.' % str(sum(inventory.itervalues()))
 
 
 print display_inventory(add_to_inventory(inv, dragonLoot))

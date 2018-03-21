@@ -12,5 +12,5 @@ def prime(n):
 
 
 print prime(23)
-
+print prime(46)
 

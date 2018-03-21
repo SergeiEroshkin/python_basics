@@ -1,18 +1,24 @@
-def max_profit(my_list):
+def max_profit(prices):
     """
-    :param my_list: List of integers
+    :param prices: List of integers
     :return: Max profit can be earned
     """
-    lowest = my_list[0]
+    # Lets assume that first price is lowest price
+    lowest = prices[0]
     max_pro = 0
-    for price in my_list:
+    # Lets iterate through prices and skip index 0
+    for price in prices[1:]:
+        # Check if current stock price in lowest
         if price < lowest:
             lowest = price
-        max_pro = max(max_pro, price - lowest)
-        print max_pro
+        # Compare current max profit with (price - lowest)
+        if max_pro < price - lowest:
+            max_pro = price - lowest
+        else:
+            continue
     return max_pro
 
 
-stockPrice = [80, 60, 140, 170, 90, 10]
-max_profit(stockPrice)
+stockPrice = [50, 60, 200, 40, 180, 90, 10]
+print max_profit(stockPrice)
 
