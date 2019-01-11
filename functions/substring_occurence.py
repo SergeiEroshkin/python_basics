@@ -5,11 +5,11 @@ def get_value(string, substring):
 
 def get_overlap(string, substring):
     count = 0
-    for i in range(len(string)):
-        if string[i: i + len(substring)] == substring:
+    for item in range(len(string)):
+        if string[item: item + len(substring)] == substring:
             count += 1
     return count
 
 
-print get_value("oooooo", "oo")
-print get_overlap("oooooo", "oo")
+print get_value("oooooo", "ooo")
+print get_overlap("oooooo", "ooo")

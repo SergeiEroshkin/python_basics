@@ -4,7 +4,7 @@ def is_fib(n):
     :return: True if n belongs to Fibonacci sequence or False if not
     """
     a, b = 1, 0
-    while a <= n:
+    for item in range(n):
         a, b = b, a+b
         if a == n:
             return True
@@ -15,3 +15,4 @@ def is_fib(n):
 
 print is_fib(55)
 print is_fib(54)
+print is_fib(987)

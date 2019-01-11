@@ -4,18 +4,25 @@ def factorial(n):
     :param n:
     :return: Factorial n
     """
-    total = 1
-    if n == 1:
-        return total
-    if type(n) == int and n:
+    if n < 0:
+        print 'Factorial does not exist for negative numbers'
+        return
+    if n == 1 or n == 0:
+        return 1
+    if isinstance(n, int):
         return n * factorial(n-1)
     else:
-        return 'You input is %s' % n
+        print 'Invalid input: "{0}"'.format(n)
 
 
-# Test Data
-print factorial(5)
-print factorial(1)
-print factorial(0)
-print factorial('string')
-print factorial(2.0)
+def main():
+    print factorial(4)
+    print factorial(1)
+    print factorial(0)
+    print factorial('string')
+    print factorial(2.0)
+    print factorial(-2)
+
+
+if __name__ == '__main__':
+    main()

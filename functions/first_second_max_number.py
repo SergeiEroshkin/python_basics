@@ -11,8 +11,8 @@ def second_max(array):
                 max2, max1 = max1, number
         else:
             max2 = number
-    print 'First number is %s, Second number %s.' % (max1, max2)
+    print 'First number: {0}\nSecond number: {1}'.format(max1, max2)
 
 
-array1 = [0, 1, 2, 3, 4, 4, 5, 5, 5]
+array1 = [0, 1, 2, 3, 4, 4, 5, 12, 12, 18, 18]
 second_max(array1)

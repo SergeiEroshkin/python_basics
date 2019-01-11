@@ -9,7 +9,7 @@ def display_inventory(inventory):
     print 'Inventory: '
     for key, value in inventory.iteritems():
         print key, value
-    return 'Total number of Items: ' + str(sum(inventory.itervalues()))
+    return 'Total number of Items: {0}'.format(sum(inventory.itervalues()))
 
 
 print display_inventory(stuff)

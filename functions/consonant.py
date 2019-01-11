@@ -20,7 +20,7 @@ def print_list(s):
 
 
 def print_dict(s):
-    for k, v in zip(count_consonant(s).keys(), count_consonant(s).values()):
+    for k, v in count_consonant(s).iteritems():
         print k, v
 
 

@@ -4,10 +4,12 @@ def fib(number):
     :param : integer
     :return: fibonacci sequence from 1 to number defined by user
     """
-    fib_list = list()
+    if number == 0:
+        return 0
+    fib_list = []
     a, b = 1, 0
-    for i in range(number):
-        a, b = b, a+b
+    for num in range(number+1):
+        a, b = b, a + b
         fib_list.append(a)
     return fib_list
 
@@ -21,9 +23,24 @@ def fibo(n):
     :return: Value of Nth number in Fibonacci sequence
     """
     a, b = 1, 0
-    for item in range(n):
+    for item in range(n+1):
         a, b = b, a+b
     return a
 
 
 print fibo(12)
+
+
+def fib_rec(n):
+    """
+    :param n: Integer
+    :return: fib
+    """
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    return fib_rec(n-1) + fib_rec(n-2)
+
+
+print fib_rec(12)

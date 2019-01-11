@@ -1,18 +1,22 @@
 def factorial(n):
-    if n == 1:
+    if n < 0:
+        print 'Factorial does not exist for negative numbers'
+        return
+    if n == 1 or n == 0:
         return 1
-    counter = 1
-    if type(n) == int and n:
+    total = 1
+    if type(n) == int:
         while n > 1:
-            counter *= n
+            total *= n
             n -= 1
-        return counter
+        return total
     else:
-        return 'Invalid input %s' % n
+        return 'Invalid input: "{0}"'.format(n)
 
 
 # Test Data
 print factorial(1)
-print factorial(2)
+print factorial(4)
 print factorial(0)
 print factorial('string')
+print factorial(-2)

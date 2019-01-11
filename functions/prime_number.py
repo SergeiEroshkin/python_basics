@@ -1,8 +1,8 @@
 def prime(n):
     prime_list = list()
     # Let's walk through the list:
-    for number in range(2, n):
-        # Let's check if number in lust is prime number
+    for number in range(2, n+1):
+        # Let's check if number in list is prime number
         for item in range(2, number):
             if number % item == 0:
                 break

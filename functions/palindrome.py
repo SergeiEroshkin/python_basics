@@ -1,12 +1,12 @@
 def is_palindrome(word):
-    #return s == s[::-1]
-    letter_in_word = len(word) - 1
-    # Lets make backward of input word
-    rev_word = ''
+    # Get index of last letter in word
+    last_letter = len(word) - 1
+    reversed_word = ''
+    # Concatenate each letter to reversed word
     for letter in word:
-        rev_word += word[letter_in_word]
-        letter_in_word -= 1
-    return word == rev_word
+        reversed_word += word[last_letter]
+        last_letter -= 1
+    return word == reversed_word
 
 
 test_string1 = 'malayalam'

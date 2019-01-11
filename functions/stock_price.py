@@ -4,21 +4,15 @@ def max_profit(prices):
     :return: Max profit can be earned
     """
     # Lets assume that first price is lowest price
-    lowest = prices[0]
-    max_pro = 0
-    # Lets iterate through prices and skip index 0
+    lowest_price = prices[0]
+    # Set Max Profit value = 0
+    max_profit = 0
     for price in prices[1:]:
-        # Check if current stock price in lowest
-        if price < lowest:
-            lowest = price
-        # Compare current max profit with (price - lowest)
-        if max_pro < price - lowest:
-            max_pro = price - lowest
-        else:
-            continue
-    return max_pro
+        if price < lowest_price:
+            lowest_price = price
+        max_profit = max(max_profit, price - lowest_price)
+    return max_profit
 
 
 stockPrice = [50, 60, 200, 40, 180, 90, 10]
 print max_profit(stockPrice)
-
