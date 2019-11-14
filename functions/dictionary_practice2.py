@@ -7,6 +7,7 @@ city_dict = {'Moscow': {'population': 1000, 'Subway': True},
 def get_values(dictionary):
     for key, value in dictionary.iteritems():
         if dictionary[key].values()[0] is False:
+            print dictionary[key].values()
             print 'City without Subway is {0}.'.format(key)
 
 

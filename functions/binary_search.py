@@ -20,5 +20,6 @@ def main():
     print 'Positive Test:', binary_search(my_list, number)
     print 'None Test:', binary_search(my_list, 101)
 
+
 if __name__ == '__main__':
     main()
